@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -36,8 +36,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+export default function SignIn({ setName }) {
   const classes = useStyles();
+  const [disabledButton, setDisabledButton] = useState(true);　// 「はじめる」ボタンを押下可能かどうかを判定
+  const [formTextValue, setformTextValue] = useState(''); // フォームの入力された文字列を管理
+  const [isEditForm, setisEditForm] = useState(false);
+  console.log(formTextValue)
+
+  // useStateの値を監視して、値が更新されたら実行される
+  useEffect(() => {
+    const disabled = formTextValue === ''
+    setDisabledButton(disabled)
+  }, [formTextValue])
 
   return (
     <Container component="main" maxWidth="xs">
@@ -56,13 +66,34 @@ export default function SignIn() {
             label="ニックメール"
             name="name"
             autoFocus
+            onChange={(e) => setformTextValue(e.target.value) }
+            onKeyDown={(e) => {
+              if (isEditForm) return
+
+              if(e.key === 'Enter') {
+                setName(e.target.value);
+                e.preventDefault()
+              }
+            }}
+            onCompositionStart={() => {
+              // 文字入力開始時のイベント
+              setisEditForm(true)
+            }}
+            onCompositionEnd={() => {
+              // 文字入力完了時のイベント
+              setisEditForm(false)
+            }}
           />
           <Button
-            type="submit"
+            type="button"
             fullWidth
             variant="contained"
             color="primary"
+            disabled={disabledButton}
             className={classes.submit}
+            onClick={() => {
+              setName(formTextValue)
+            }}
           >
             はじめる
           </Button>
