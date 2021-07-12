@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Main from './Main.js';
 import SignIn from './SignIn.js';
+import config from '../config.json';
 
 export default () => {
   // React Hook
@@ -9,9 +10,9 @@ export default () => {
   const [name, setName] = useState('');
   console.log({ name })
 
-  if (name.length) {
-    return <Main name={name}/>;
+  if (config.signInEnable && !name.length) {
+    return <SignIn setName={setName}/>
   } else {
-    return <SignIn setName={setName}/>;
+    return <Main name={name}/>
   }
 };
