@@ -11,8 +11,8 @@ const firebaseConfig = {
 }
 firebase.initializeApp(firebaseConfig)
 const database = firebase.database()
-const messageRef = database.ref('messages') //データベースの参照先の指定
+const messagesRef = database.ref('messages') //データベースの参照先の指定
 
 export const pushMessage = ({ name, text }) => {
-  messageRef.push({ name, text })
+  messagesRef.push({ name, text })
 }
