@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { TextField }from '@material-ui/core';
+
+import { pushMessage } from '../firebase'
 
 const MessageField = ({name, setInputText, inputText}) => {
   const [isEditForm, setIsEditForm] = useState(false)
@@ -17,6 +19,7 @@ const MessageField = ({name, setInputText, inputText}) => {
 
         if(e.key === 'Enter') {
           console.log(`firebaseに入力した文字をpush：${inputText}`)
+          pushMessage({ name: 'aaaa', text: inputText })
           setInputText('')
           e.preventDefault()
         }
