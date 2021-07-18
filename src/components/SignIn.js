@@ -39,9 +39,8 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn({ setName }) {
   const classes = useStyles();
   const [disabledButton, setDisabledButton] = useState(true);　// 「はじめる」ボタンを押下可能かどうかを判定
-  const [formTextValue, setformTextValue] = useState(''); // フォームの入力された文字列を管理
-  const [isEditForm, setisEditForm] = useState(false);
-  console.log(formTextValue)
+  const [formTextValue, setFormTextValue] = useState(''); // フォームの入力された文字列を管理
+  const [isEditForm, setIsEditForm] = useState(false);
 
   // useStateの値を監視して、値が更新されたら実行される
   useEffect(() => {
@@ -66,7 +65,7 @@ export default function SignIn({ setName }) {
             label="ニックメール"
             name="name"
             autoFocus
-            onChange={(e) => setformTextValue(e.target.value) }
+            onChange={(e) => setFormTextValue(e.target.value) }
             onKeyDown={(e) => {
               if (isEditForm) return
 
@@ -77,11 +76,11 @@ export default function SignIn({ setName }) {
             }}
             onCompositionStart={() => {
               // 文字入力開始時のイベント
-              setisEditForm(true)
+              setIsEditForm(true)
             }}
             onCompositionEnd={() => {
               // 文字入力完了時のイベント
-              setisEditForm(false)
+              setIsEditForm(false)
             }}
           />
           <Button
