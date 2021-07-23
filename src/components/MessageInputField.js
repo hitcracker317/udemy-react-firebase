@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { makeStyles }from '@material-ui/core/styles'
 import { Grid, Avatar } from '@material-ui/core'
 import { gravatarPath } from '../gravatar.js'
@@ -14,6 +14,7 @@ const useStyles = makeStyles({
 })
 
 const MessageInputField = ({ name }) => {
+  const inputElement = useRef(null) // DOMの参照
   const [inputText, setInputText] = useState('')
 
   const classes = useStyles()
@@ -26,14 +27,23 @@ const MessageInputField = ({ name }) => {
           <Avatar src={avatarPath} />
         </Grid>
         <Grid item xs={10}>
-          <MessageField name={name} setInputText={setInputText} inputText={inputText} />
+          <MessageField
+            inputElement={inputElement}
+            name={name}
+            setInputText={setInputText}
+            inputText={inputText}
+          />
         </Grid>
         <Grid item xs={1}>
-          <MessageSubmitButton name={name} setInputText={setInputText} inputText={inputText} />
+          <MessageSubmitButton
+            inputElement={inputElement}
+            name={name}
+            setInputText={setInputText}
+            inputText={inputText}
+          />
         </Grid>
       </Grid>
     </div>
   )
-
 }
 export default MessageInputField

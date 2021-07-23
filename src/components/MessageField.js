@@ -3,11 +3,13 @@ import { TextField }from '@material-ui/core';
 
 import { pushMessage } from '../firebase'
 
-const MessageField = ({name, setInputText, inputText}) => {
+const MessageField = ({inputElement, name, setInputText, inputText}) => {
   const [isEditForm, setIsEditForm] = useState(false)
 
   return (
     <TextField
+      inputRef={inputElement}
+      autoFocus
       onChange={(e) => {
         setInputText(e.target.value)
       }}
