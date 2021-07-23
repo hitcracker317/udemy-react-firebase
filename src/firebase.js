@@ -23,6 +23,7 @@ firebase.initializeApp(firebaseConfig)
 const database = firebase.database()
 const messagesRef = database.ref('messages') //データベースの参照先の指定
 
+// データベースにnameとtextというフィールドを持った値を保存するメソッド
 export const pushMessage = ({ name, text }) => {
   messagesRef.push({ name, text })
 }
