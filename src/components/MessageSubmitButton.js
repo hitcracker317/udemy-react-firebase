@@ -9,7 +9,7 @@ const MessageSubmitButton = ({inputElement, name, setInputText, inputText}) => {
     <IconButton
       disabled={!inputText.length}
       onClick={() => {
-        pushMessage({ name: 'aaaa', text: inputText }) //firebaseへの登録
+        pushMessage({ name, text: inputText }) //firebaseへの登録
         setInputText('')
         inputElement.current.focus()
       }}

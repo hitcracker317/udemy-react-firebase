@@ -21,7 +21,7 @@ const MessageField = ({inputElement, name, setInputText, inputText}) => {
 
         if(e.key === 'Enter') {
           console.log(`firebaseに入力した文字をpush：${inputText}`)
-          pushMessage({ name: 'aaaa', text: inputText })
+          pushMessage({ name, text: inputText })
           setInputText('')
           e.preventDefault()
         }
