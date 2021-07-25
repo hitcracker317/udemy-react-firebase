@@ -1,0 +1,162 @@
+[debug] [2021-07-25T05:00:04.303Z] ----------------------------------------------------------------------
+[debug] [2021-07-25T05:00:04.304Z] Command:       /usr/local/Cellar/node/16.4.0/bin/node /Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/.bin/firebase init
+[debug] [2021-07-25T05:00:04.305Z] CLI Version:   8.12.1
+[debug] [2021-07-25T05:00:04.305Z] Platform:      darwin
+[debug] [2021-07-25T05:00:04.305Z] Node Version:  v16.4.0
+[debug] [2021-07-25T05:00:04.306Z] Time:          Sun Jul 25 2021 14:00:04 GMT+0900 (日本標準時)
+[debug] [2021-07-25T05:00:04.306Z] ----------------------------------------------------------------------
+[debug] [2021-07-25T05:00:04.306Z] 
+[debug] [2021-07-25T05:00:04.310Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-25T05:00:04.311Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/dainaser186/Documents/udemy/react-firebase/react-chat
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-07-25T05:00:32.383Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-25T05:00:32.383Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-25T05:00:32.560Z] <<< HTTP RESPONSE 400 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 25 Jul 2021 05:00:32 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-25T05:00:32.561Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2021-07-25T05:00:32.783Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 25 Jul 2021 05:00:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-25T05:00:32.783Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-07-25T05:00:32.784Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-07-25T05:00:32.882Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at Request.<anonymous> (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/request/request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at IncomingMessage.<anonymous> (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+    at IncomingMessage.emit (node:domain:470:12)
+    at endReadableNT (node:internal/streams/readable:1329:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2021-07-25T05:00:37.465Z] ----------------------------------------------------------------------
+[debug] [2021-07-25T05:00:37.468Z] Command:       /usr/local/Cellar/node/16.4.0/bin/node /Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/.bin/firebase init
+[debug] [2021-07-25T05:00:37.468Z] CLI Version:   8.12.1
+[debug] [2021-07-25T05:00:37.468Z] Platform:      darwin
+[debug] [2021-07-25T05:00:37.469Z] Node Version:  v16.4.0
+[debug] [2021-07-25T05:00:37.470Z] Time:          Sun Jul 25 2021 14:00:37 GMT+0900 (日本標準時)
+[debug] [2021-07-25T05:00:37.470Z] ----------------------------------------------------------------------
+[debug] [2021-07-25T05:00:37.470Z] 
+[debug] [2021-07-25T05:00:37.474Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-25T05:00:37.475Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/dainaser186/Documents/udemy/react-firebase/react-chat
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-07-25T05:00:48.271Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-25T05:00:48.271Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-25T05:00:48.450Z] <<< HTTP RESPONSE 400 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 25 Jul 2021 05:00:48 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-25T05:00:48.451Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2021-07-25T05:00:49.220Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 25 Jul 2021 05:00:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-25T05:00:49.220Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-07-25T05:00:49.222Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-07-25T05:00:49.328Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at Request.<anonymous> (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/request/request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at IncomingMessage.<anonymous> (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+    at IncomingMessage.emit (node:domain:470:12)
+    at endReadableNT (node:internal/streams/readable:1329:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2021-07-25T05:01:19.877Z] ----------------------------------------------------------------------
+[debug] [2021-07-25T05:01:19.879Z] Command:       /usr/local/Cellar/node/16.4.0/bin/node /Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/.bin/firebase init
+[debug] [2021-07-25T05:01:19.880Z] CLI Version:   8.12.1
+[debug] [2021-07-25T05:01:19.880Z] Platform:      darwin
+[debug] [2021-07-25T05:01:19.880Z] Node Version:  v16.4.0
+[debug] [2021-07-25T05:01:19.881Z] Time:          Sun Jul 25 2021 14:01:19 GMT+0900 (日本標準時)
+[debug] [2021-07-25T05:01:19.881Z] ----------------------------------------------------------------------
+[debug] [2021-07-25T05:01:19.882Z] 
+[debug] [2021-07-25T05:01:19.885Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-25T05:01:19.886Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/dainaser186/Documents/udemy/react-firebase/react-chat
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-07-25T05:01:25.790Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-25T05:01:25.790Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-25T05:01:25.981Z] <<< HTTP RESPONSE 400 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 25 Jul 2021 05:01:25 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-25T05:01:25.983Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2021-07-25T05:01:26.515Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 25 Jul 2021 05:01:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-25T05:01:26.515Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-07-25T05:01:26.516Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-07-25T05:01:26.648Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at Request.<anonymous> (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/request/request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at IncomingMessage.<anonymous> (/Users/dainaser186/Documents/udemy/react-firebase/react-chat/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+    at IncomingMessage.emit (node:domain:470:12)
+    at endReadableNT (node:internal/streams/readable:1329:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
